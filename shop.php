@@ -1,8 +1,24 @@
 <?php
-require 'admin/connect.php';
+include 'admin/connect.php';
 $sql = "select * from tbl_product";
 $result=mysqli_query($connect,$sql);
+$search='';
+if (isset($_POST['search'])){
+    $search=$_POST['search'];
+}
+$sql_search="select * from tbl_product where product_name like '%$search%'";
+$products = mysqli_query($connect,$sql_search);
+//    $search=$_GET['search'];
 
+
+$sqlCount="SELECT count(*) FROM tbl_product";
+// Mang so san pham
+$arrayCount = mysqli_query($connect,$sqlCount);
+$resultNumber = mysqli_fetch_array($arrayCount);
+$countRecord = $resultNumber['count(*)'];
+
+$recordOnepage =2;
+$sotrang=ceil($countRecord/$recordOnepage);
 
 ?>
 <!DOCTYPE html>
@@ -48,7 +64,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="w-100 pt-1 mb-5 text-right">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+            <form action="" method="" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
                     <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
                     <button type="submit" class="input-group-text bg-success text-light">
@@ -109,9 +125,11 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="row flex-row-reverse">
                     <div class="col-md-6 pb-4">
                         <div class="d-flex flex-row-reverse">
-                            <form style="margin-right: 0 !important;" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"  role="search">
-                                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                            <form style="margin-right: 0 !important;" action="" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" >
+                                <input type="text" name="search"  class="form-control" placeholder="Search..." aria-label="Search">
+
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -158,7 +176,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">$<?php echo $product['price']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -170,9 +188,12 @@ https://templatemo.com/tm-559-zay-shop
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
+
                             <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
                                tabindex="-1">1</a>
+
                         </li>
+
                         <li class="page-item">
                             <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark"
                                href="#">2</a>
@@ -181,6 +202,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
                         </li>
                     </ul>
+
                 </div>
             </div>
 
