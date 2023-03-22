@@ -44,9 +44,7 @@ a.theme-link:hover {
 
 .btn {
     font-weight: 600;
-    padding: 0.875rem 2.5rem;
     transition: all 0.4s ease-in-out;
-    border-radius: 2rem;
     border: none
 }
 
