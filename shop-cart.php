@@ -267,10 +267,7 @@ https://templatemo.com/tm-559-zay-shop
                         <p class="mb-2">$23.49</p>
                       </div>
       
-                      <div class="d-flex justify-content-between" style="font-weight: 500;">
-                        <p class="mb-0">Shipping</p>
-                        <p class="mb-0">$2.99</p>
-                      </div>
+
       
                       <hr class="my-4">
       
