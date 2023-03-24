@@ -88,11 +88,11 @@ https://templatemo.com/tm-559-zay-shop
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col" class="h5">Shopping Bag</th>
-                      <th scope="col">Format</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Action</th>
+                      <th scope="col" class="h5">Giỏ hàng</th>
+                      <th scope="col">Thể loại</th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Giá</th>
+                      <th scope="col">Thao tác</th>
                     </tr>
                   </thead>
                   <tbody>
