@@ -328,7 +328,7 @@
                 <?php foreach ($result as $product){?>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.php?id=<?php echo $product['id'];?>">
+                        <a class="text-center" href="shop-single.php?id=<?php echo $product['id'];?>">
                             <img src="./img/<?php echo $product['img'];?>" style="width: 300px;" class="card-img-top" alt="Book">
                         </a>
                         <div class="card-body">

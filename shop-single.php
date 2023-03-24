@@ -150,7 +150,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <li class="list-inline-item text-right">
                                                 Quantity
                                                 <input type="hidden" name="product-quanity" id="product-quanity"
-                                                    value="1">
+                                                    value="<?php echo $rowProDetail[5] ?>">
                                             </li>
                                             <li class="list-inline-item"><span class="btn btn-success"
                                                     id="btn-minus">-</span></li>
@@ -158,6 +158,10 @@ https://templatemo.com/tm-559-zay-shop
                                                     id="var-value"><?php echo $rowProDetail[5] ?></span></li>
                                             <li class="list-inline-item"><span class="btn btn-success"
                                                     id="btn-plus">+</span></li>
+                                            <input type="hidden" name="id" value="1">
+                                            <input type="hidden" name="img" value="<?php echo $rowProDetail[2];?>">
+                                            <input type="hidden" name="product_name" value="1">
+                                            <input type="hidden" name="price" value="1">
                                         </ul>
                                     </div>
                                 </div>

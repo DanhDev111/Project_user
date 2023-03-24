@@ -101,8 +101,6 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </div>
 
-
-
     <!-- Start Content -->
     <div class="container py-5">
         <div class="row">
