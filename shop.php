@@ -8,18 +8,44 @@ if (isset($_POST['search'])){
 }
 $sql_search="select * from tbl_product where product_name like '%$search%'";
 $products = mysqli_query($connect,$sql_search);
-//    $search=$_GET['search'];
 
 
-$sqlCount="SELECT count(*) FROM tbl_product";
-// Mang so san pham
-$arrayCount = mysqli_query($connect,$sqlCount);
-$resultNumber = mysqli_fetch_array($arrayCount);
-$countRecord = $resultNumber['count(*)'];
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+}else{
+    $page =1;
+}
 
-$recordOnepage =2;
-$sotrang=ceil($countRecord/$recordOnepage);
+//$sqlCount = "SELECT COUNT(*) AS count_record FROM tbl_product WHERE product_name LIKE '%$search%'";
+//$counts = mysqli_query($connect, $sqlCount);
 
+$record_per_page = 6;
+
+$start = ($page - 1) * $record_per_page;
+
+$sql = "SELECT * FROM tbl_product WHERE product_name LIKE '%$search%' LIMIT $start, $record_per_page";
+$result=mysqli_query($connect,$sql);
+//$sqlCount="SELECT count(*) FROM tbl_product";
+//
+//$arrayCount = mysqli_query($connect,$sqlCount);
+//$resultNumber = mysqli_fetch_array($arrayCount);
+//$countRecord = $resultNumber['count(*)'];
+//
+//$recordOnepage =2;
+//$sotrang=ceil($countRecord/$recordOnepage);
+//$mysqli =new mysqli('localhost','root','','testingsystem')
+//// Trang bắt đầu
+//$start = 0;
+//// Giới hạn
+//$rows_per_page = 4;
+//
+//$ketqua = mysqli_query($mysqli,"select * from tbl_product limit 0,4");
+//$sohang = $sql->num_rows;
+//$pages=ceil($sohang / 4);
+//if (isset($_GET['page-nr'])){
+//    $_GET['page-nr'] - 1;
+//    $start = $pages * 4;
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,26 +159,40 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                     </div>
                 </div>
+                <?php
+                $pr_query= "select * from tbl_product";
+                $pr_result=mysqli_query($connect,$pr_query);
+                $total_records = mysqli_num_rows($pr_result);
+
+                $total_pages=ceil($total_records/$record_per_page);
+
+                ?>
                 <div class="row">
-                    <?php foreach ($result as $product):?>
+                    <?php  while($product = mysqli_fetch_array($result) ){?>
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
                                 <img class="card-img rounded-0 img-fluid" src="./img/<?php echo $product['img'];?>">
+                                <?php
+
+                                ?>
                                 <div
                                         class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="shop-single.html"><i
-                                                        class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                        <li>
+                                            <a class="btn btn-success text-white" href="shop-single.php?id=<?php echo $product['id'];?>">
+                                                <i class="far fa-heart"></i>
+                                            </a>
+                                        </li>
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.php?id=<?php echo $product['id'];?>"><i
                                                         class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i
+                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.php?id=<?php echo $product['id'];?>"><i
                                                         class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="shop-single.html" class="cart-title h3 text-decoration-none"><?php echo $product['product_name']; ?></a>
+                                <a href="?detail=shop-single&id=<?php echo $product['id'] ?>;" class="cart-title h3 text-decoration-none"><?php echo $product['product_name']; ?></a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li class="pt-2">
                                         <span
@@ -181,26 +221,22 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                     </div>
                     <?php
-                        endforeach
+                        }
                     ?>
 
                 </div>
-                <div div="row">
+                <div class="row">
                     <ul class="pagination pagination-lg justify-content-end">
-                        <li class="page-item disabled">
-
-                            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
-                               tabindex="-1">1</a>
-
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark"
-                               href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
+                        <?php
+                        for ($counter=1;$counter<=$total_pages;$counter++){
+                            ?>
+                            <li class="page-item ">
+                                <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="?page=<?php echo $counter ?>"
+                                   tabindex="-1"><?php echo $counter?></a>
+                            </li>
+                            <?php
+                        }
+                        ?>
                     </ul>
 
                 </div>

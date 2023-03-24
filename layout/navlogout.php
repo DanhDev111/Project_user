@@ -25,7 +25,7 @@
                         <a class="nav-link" href="about.html">Về Chúng Tôi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Cửa Hàng</a>
+                        <a class="nav-link" href="shop.php">Cửa Hàng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Liên Hệ</a>

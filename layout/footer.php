@@ -7,14 +7,14 @@
                 <div class=" border-end border-light">
                     <h2 class="h2 text-success  pb-3 logo">
                         <div class="content">
-                            <img class="image_footer" src="../assets/uploads/apple-icon-footer.png" alt="">
+                            <img class="image_footer" src="./assets/uploads/apple-icon-footer.png" alt="">
                         </div>
                     </h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-P214, Tòa nhà A17 Bách Khoa, 17 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội
-</li>
+                            P214, Tòa nhà A17 Bách Khoa, 17 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội
+                        </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
                             <a class="text-decoration-none" href="tel:036 779 1116">036 779 1116</a>
@@ -22,7 +22,7 @@ P214, Tòa nhà A17 Bách Khoa, 17 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
                             <a class="text-decoration-none"
-                                href="mailto:tiemsachcuoingo@gmail.com">tiemsachcuoingo@gmail.com</a>
+                               href="mailto:tiemsachcuoingo@gmail.com">tiemsachcuoingo@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -60,27 +60,27 @@ P214, Tòa nhà A17 Bách Khoa, 17 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội
                 <ul class="list-inline text-left footer-icons">
                     <li class="list-inline-item border border-light rounded-circle text-center">
                         <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
-                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                     </li>
                     <li class="list-inline-item border border-light rounded-circle text-center">
                         <a class="text-light text-decoration-none" target="_blank"
-                            href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                           href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                     </li>
                     <li class="list-inline-item border border-light rounded-circle text-center">
                         <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
-                                class="fab fa-twitter fa-lg fa-fw"></i></a>
+                                    class="fab fa-twitter fa-lg fa-fw"></i></a>
                     </li>
                     <li class="list-inline-item border border-light rounded-circle text-center">
                         <a class="text-light text-decoration-none" target="_blank"
-                            href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                           href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="col-auto">
                 <label class="sr-only" for="subscribeEmail">Email address</label>
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
-                        placeholder="Email address">
+                    <input type="text" class="form-control bg-white border-light" id="subscribeEmail"
+                           placeholder="Email address">
                     <div class="input-group-text btn-success text-light">Subscribe</div>
                 </div>
             </div>
@@ -92,7 +92,7 @@ P214, Tòa nhà A17 Bách Khoa, 17 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội
             <div class="row pt-2">
                 <div class="col-12">
                     <p class="text-left text-light">
-Copyright &copy; 2023 Tiệm Sách Cuối Ngõ <a rel="sponsored" href="/" target="_blank">| All
+                        Copyright &copy; 2023 Tiệm Sách Cuối Ngõ <a rel="sponsored" href="/" target="_blank">| All
                             Rights Reserved!</a>
                     </p>
                 </div>
