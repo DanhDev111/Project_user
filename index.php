@@ -73,7 +73,7 @@
                         data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="cart/shop-cart.php">
+                    <a class="nav-icon position-relative text-decoration-none" href="shop-cart.php">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <!-- <span
                             class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
@@ -82,7 +82,7 @@
                         <!-- Thêm đăng nhập đăng kí -->
                     </a>
                     <div class="">
-                        <a class="nav-icon position-relative text-decoration-none" href="cart/shop-cart.php"></a>
+                        <a class="nav-icon position-relative text-decoration-none" href="shop-cart.php"></a>
 <!--                        <a href="./login.php" class="btn btn-outline-success border border-success me-2">Đăng Nhập</a>-->
 <!--                        <a href="./register.php" class="btn btn-success text-white">Đăng Kí</a>-->
                         <a href="logout.php" class="btn btn-outline-success border border-success me-2">Đăng xuất</a>
@@ -309,6 +309,11 @@
             </div>
 <!--            bắt daduf sản phẩm-->
             <?php
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $product = "SELECT * FROM tbl_product where id= $id";
+
+            }
             $page =1;
             $record_per_page = 3;
             $start = ($page - 1) * $record_per_page;
@@ -319,10 +324,11 @@
             $total_records = mysqli_num_rows($pr_result);
             ?>
             <div class="row">
+
                 <?php foreach ($result as $product){?>
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
-                        <a href="shop-single.php">
+                        <a href="shop-single.php?id=<?php echo $product['id'];?>">
                             <img src="./img/<?php echo $product['img'];?>" style="width: 300px;" class="card-img-top" alt="Book">
                         </a>
                         <div class="card-body">
@@ -336,7 +342,7 @@
                                 </li>
                                 <li class="text-muted text-right">$<?php echo $product['price']; ?></li>
                             </ul>
-                            <a href="shop-single.php" class="h2 text-decoration-none text-dark"><?php echo $product['product_name']; ?></a>
+                            <a href="shop-single.php?id=<?php echo $product['id'];?>" class="h2 text-decoration-none text-dark"><?php echo $product['product_name']; ?></a>
                             <p class="card-text">
                                 <?php echo $product['description']; ?>
                             </p>

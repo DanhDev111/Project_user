@@ -142,7 +142,7 @@ https://templatemo.com/tm-559-zay-shop
                             <h6>Mô Tả:</h6>
                             <p><?php echo $rowProDetail[3] ?></p>
                             <h6 class="pb-3">Tác giả: <?php echo $rowProDetail[4] ?></h6>
-                            <form action="" method="GET">
+                            <form action="" method="post">
                                 <input type="hidden" name="product-title" value="Activewear">
                                 <div class="row">
                                     <div class="col-auto">

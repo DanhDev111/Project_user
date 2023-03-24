@@ -6,23 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="../assets/uploads/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/uploads/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/uploads/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/uploads/favicon.ico">
 
-    <link rel="stylesheet" href="../assets/style/common/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/common/bootstrap.min.css">
     <link rel="stylesheet" href="./asset/style/common/normalize.css">
-    <link rel="stylesheet" href="../assets/style/common/base.css">
+    <link rel="stylesheet" href="assets/style/common/base.css">
     <link rel="stylesheet" href="./asset/style/common/reset.css">
-    <link rel="stylesheet" href="../assets/style/custom.css">
-    <link rel="stylesheet" href="../assets/style/shop-cart.css">
+    <link rel="stylesheet" href="assets/style/custom.css">
+    <link rel="stylesheet" href="assets/style/shop-cart.css">
 
 
     <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="../assets/font/fontawesome-pro-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/font/fontawesome-pro-5.13.0-web/css/all.min.css">
 
     <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="../assets/style/common/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/style/common/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/style/common/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/style/common/slick-theme.css">
     <!--
     
 TemplateMo 559 Zay Shop
@@ -57,7 +57,7 @@ https://templatemo.com/tm-559-zay-shop
 
     <!-- Header -->
     <?php
-        include './layout/navlogout.php'
+    include './layout/navlogout.php'
     ?>
     <!-- Close Header -->
 
@@ -99,7 +99,7 @@ https://templatemo.com/tm-559-zay-shop
                     <tr>
                       <th scope="row">
                         <div class="d-flex align-items-center">
-                          <img src="../img/book1.jpg" class="img-fluid rounded-3"
+                          <img src="img/book1.jpg" class="img-fluid rounded-3"
                                style="width: 120px;" alt="Book">
                           <div class="flex-column ms-4">
                             <p class="mb-2">Thinking, Fast and Slow</p>
@@ -138,7 +138,7 @@ https://templatemo.com/tm-559-zay-shop
                     <tr>
                       <th scope="row" class="border-bottom-0">
                         <div class="d-flex align-items-center">
-                          <img src="../img/book1.jpg" class="img-fluid rounded-3"
+                          <img src="img/book1.jpg" class="img-fluid rounded-3"
                                style="width: 120px;" alt="Book">
                           <div class="flex-column ms-4">
                             <p class="mb-2">Homo Deus: A Brief History of Tomorrow</p>
@@ -779,7 +779,7 @@ https://templatemo.com/tm-559-zay-shop
                     <div class=" border-end border-light">
                         <h2 class="h2 text-success  pb-3 logo">
                             <div class="content">
-                                <img class="image_footer" src="../assets/uploads/apple-icon-footer.png" alt="">
+                                <img class="image_footer" src="assets/uploads/apple-icon-footer.png" alt="">
                             </div>
                         </h2>
                         <ul class="list-unstyled text-light footer-link-list">
@@ -876,14 +876,14 @@ https://templatemo.com/tm-559-zay-shop
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="../assets/js/jquery-1.11.0.min.js"></script>
-    <script src="../assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
     <!-- End Script -->
 
     <!-- Start Slider Script -->
-    <script src="../assets/js/slick.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script>
         $('#carousel-related-product').slick({
             infinite: true,
